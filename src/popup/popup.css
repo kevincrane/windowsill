@@ -1,0 +1,39 @@
+html, body {
+    width: 200px;
+    background: lightsteelblue;
+}
+
+h1 {
+    font-style: italic;
+    text-align: center;
+}
+
+.button {
+    width: 70%;
+    height: 50px;
+    background: seashell;
+
+    border: 2px solid cadetblue;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 0 auto 10px;
+}
+.button:hover:not(.success) {
+    background-color: cadetblue;
+    cursor: pointer;
+}
+
+.button-title {
+    font-size: 18px;
+    font-family: sans-serif;
+    text-align: center;
+    padding-top: 10px;
+}
+.button-subtitle {
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+div.success {
+    background-color: limegreen;
+}
