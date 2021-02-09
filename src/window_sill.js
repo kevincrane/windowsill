@@ -145,27 +145,6 @@ export const focusWindowSill = () => {
             });
         });
 
-        // seedSyncedState();
-
         return windowSillId;
-    });
-}
-
-// TODO: delete this before publishing
-function seedSyncedState() {
-    let syncTime = new Date();
-    let sillState = {
-        syncTime: syncTime,
-        syncTabs: [
-            "https://www.nytimes.com/",
-            "https://news.ycombinator.com/",
-            "https://twitter.com/",
-            "about:newtab"
-        ].filter(url => !isPrivilegedUrl(url))
-    }
-
-    browser.storage.local.set(sillState).then(() => {
-        console.log('seedSyncedState: Seeded synced sillState');
-        console.log(sillState);
     });
 }

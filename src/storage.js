@@ -1,8 +1,7 @@
 
 // Pointers to the 2 storage methods
 const local_storage = browser.storage.local;
-const sync_storage = browser.storage.sync;   // TODO use this instead after publishing extension
-// const sync_storage = browser.storage.local;
+const sync_storage = browser.storage.sync;
 
 const ACTIVITYLOG_LENGTH = 15;
 
