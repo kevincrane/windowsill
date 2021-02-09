@@ -52,7 +52,7 @@ a time.
 
 #### Links to Download Extension
 
-* [Firefox - Window Sill Extension](TODO)
+* [Firefox - Window Sill Extension](https://addons.mozilla.org/en-US/firefox/addon/windowsill/)
 
 #### How to Develop
 
@@ -67,3 +67,5 @@ a time.
 3. On Firefox, go to [about:debugging](about:debugging#/runtime/this-firefox) > Load Temporary
    Add-on > select `manifest.json` from this repo
 4. Open the Console with "Inspect" to see logging from this extension.
+5. To make a new release on Firefox, TODO.
+6. To update the icon, use `icons/windowsill-icon.pixil` at https://www.pixilart.com.

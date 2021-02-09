@@ -17,10 +17,8 @@ syncButton.addEventListener("click", () => {
 });
 document.addEventListener("DOMContentLoaded", () => {
     browser.storage.local.get({lastSyncTime: -1}).then(data => {
-        let lastSyncDuration = "";
-        if (data.lastSyncTime < 0) {
-            lastSyncDuration = "N/A";
-        } else {
+        let lastSyncDuration = "N/A";
+        if (data.lastSyncTime >= 0) {
             let now = new Date();
             let durationHour = Math.floor((now - data.lastSyncTime) / (60 * 60 *1000));
             let durationMin = Math.floor((now - data.lastSyncTime) / (60*1000)) % 60;
@@ -28,7 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
             lastSyncDuration = `${durationHour > 0 ? `${durationHour}:` : ``}` +
                 `${durationMin.toString().padStart(2, '0')}:${durationSec.toString().padStart(2, '0')}`;
         }
-        syncButton.innerHTML += `<div class='button-subtitle'>Last updated: ${lastSyncDuration} ago</div>`;
+        let syncSubtitle = document.createElement("div");
+        syncSubtitle.appendChild(document.createTextNode(`Last updated: ${lastSyncDuration} ago`));
+        syncSubtitle.classList.add("button-subtitle");
+        syncButton.appendChild(syncSubtitle);
         console.log(syncButton.innerHTML);
     })
 });

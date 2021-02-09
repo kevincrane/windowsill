@@ -145,7 +145,7 @@ export const focusWindowSill = () => {
             });
         });
 
-        seedSyncedState();
+        // seedSyncedState();
 
         return windowSillId;
     });

@@ -3,12 +3,16 @@
   "name": "Window Sill",
   "author": "Kevin Crane",
   "homepage_url": "https://github.com/kevincrane/windowsill",
-  "description": "Sync your tabs in one Firefox window and seamlessly have them waiting for you on your computers",
+  "description": "Sync your tabs in one Firefox window and have them waiting for you seamlessly on your other devices",
   "version": "0.1",
 
-  "icons": {
-    "64": "icons/icon.png"
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "windowsill-addon@kcrane.co",
+      "strict_min_version": "48.0"
+    }
   },
+
   "permissions": [
     "tabs",
     "storage"
@@ -19,10 +23,15 @@
   },
   "browser_action": {
     "default_icon": {
-      "64": "icons/icon.png"
+      "48": "icons/icon48.png",
+      "96": "icons/icon96.png"
     },
     "default_popup": "src/popup/popup.html",
     "default_title": "Window Sill"
+  },
+  "icons": {
+    "48": "icons/icon48.png",
+    "96": "icons/icon96.png"
   },
   "content_security_policy": "script-src 'self'; object-src 'self'"
 //  "options_ui": {
