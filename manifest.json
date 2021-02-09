@@ -8,7 +8,7 @@
 
   "browser_specific_settings": {
     "gecko": {
-      "id": "windowsill-addon@kcrane.co",
+      "id": "{cd8c8638-7f15-476c-8a8a-216cc125e07b}",
       "strict_min_version": "48.0"
     }
   },
